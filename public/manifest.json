@@ -1,0 +1,40 @@
+{
+  "name": "جلف ويب كو - GulfWebCo",
+  "short_name": "GulfWeb",
+  "description": "تصميم وتطوير مواقع شركات احترافية في منطقة الخليج",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#0B0F19",
+  "theme_color": "#0B0F19",
+  "orientation": "portrait-primary",
+  "dir": "rtl",
+  "lang": "ar",
+  "icons": [
+    {
+      "src": "/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ],
+  "categories": ["business", "productivity"],
+  "screenshots": [],
+  "shortcuts": [
+    {
+      "name": "الأسعار",
+      "url": "/#pricing",
+      "description": "شاهد باقات الأسعار"
+    },
+    {
+      "name": "تواصل معنا",
+      "url": "/#contact",
+      "description": "اطلب عرض سعر"
+    }
+  ]
+}

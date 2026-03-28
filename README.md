@@ -1,73 +1,50 @@
-# Welcome to your Lovable project
+# جلف ويب كو | GulfWebCo 🚀
+### تصميم وتطوير مواقع الشركات الاحترافية بمنطقة الخليج
 
-## Project info
+![GulfWebCo Hero](https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=1200&auto=format&fit=crop)
 
-**URL**: https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID
+الموقع الرسمي لـ **جلف ويب كو**، المتخصصة في بناء حضور رقمي قوي وجذاب للشركات. تم تصميم اللاندينج بيدج بأحدث التقنيات لضمان السرعة، الجودة، وتجربة مستخدم ممتازة.
 
-## How can I edit this code?
+## ✨ المميزات الرئيسية
+- **تصميم مودرن وفريميوم**: استخدام Glassmorphism وتأثيرات بصرية متطورة.
+- **دعم كامل للغة العربية (RTL)**: تجربة مستخدم مثالية للناطقين بالعربية.
+- **تتبع وتحليلات مدمجة (Analytics)**: لوحة تحكم مخفية ومحمية لمتابعة تفاعل الزوار.
+- **تكامل مع واتساب**: ربط جميع أزرار الموقع برسائل مخصصة للرد السريع.
+- **متوافق مع الهواتف (Responsive)**: يعمل بكفاءة عالية على جميع الأجهزة.
+- **PWA (Progressive Web App)**: إمكانية تثبيت الموقع كتطبيق على الهاتف.
 
-There are several ways of editing your application.
+## 🛠️ التقنيات المستخدمة
+- **Vite + React 18**: لضمان أقصى سرعة أداء.
+- **TypeScript**: لكود أكثر استقراراً وقابلية للتوسع.
+- **Tailwind CSS + shadcn/ui**: لتصميم عصري وسهل التعديل.
+- **Framer Motion**: لإضافة حركات انتقالية ناعمة وجذابة.
+- **Recharts**: لعرض إحصائيات التفاعل في لوحة تحكم التحليلات.
 
-**Use Lovable**
+## 📊 لوحة تحكم التحليلات
+الموقع يحتوي على لوحة تحكم داخلية لمتابعة عدد الزيارات والنقرات على الأزرار.
+- **الرابط**: `/admin/analytics`
+- **الحماية**: الصفحة محمية بكلمة مرور لضمان الخصوصية.
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID) and start prompting.
+## 🚀 كيفية التشغيل محلياً
+1. قم بتحميل المستودع:
+   ```bash
+   git clone https://github.com/Yahia553/Gulf-Web.git
+   ```
+2. انتقل لمجلد المشروع:
+   ```bash
+   cd Gulf-Web
+   ```
+3. ثبت الحزم البرمجية:
+   ```bash
+   npm install
+   ```
+4. ابدأ السيرفر المحلي:
+   ```bash
+   npm run dev
+   ```
 
-Changes made via Lovable will be committed automatically to this repo.
+## 🌐 النشر (Deployment)
+المشروع جاهز للنشر الفوري على منصات مثل **Netlify** أو **Vercel** بمجرد ربط المستودع.
 
-**Use your preferred IDE**
-
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
-
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
-
-Follow these steps:
-
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
-
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
-
-# Step 3: Install the necessary dependencies.
-npm i
-
-# Step 4: Start the development server with auto-reloading and an instant preview.
-npm run dev
-```
-
-**Edit a file directly in GitHub**
-
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
-
-**Use GitHub Codespaces**
-
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
-
-## What technologies are used for this project?
-
-This project is built with:
-
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
-
-## How can I deploy this project?
-
-Simply open [Lovable](https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID) and click on Share -> Publish.
-
-## Can I connect a custom domain to my Lovable project?
-
-Yes, you can!
-
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
-
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/features/custom-domain#custom-domain)
+---
+**جلف ويب كو** - نصمم مستقبلك الرقمي اليوم. 💻📱

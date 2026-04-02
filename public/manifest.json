@@ -1,14 +1,14 @@
 {
-  "name": "جلف ويب - Gulf Web",
-  "short_name": "جلف ويب",
-  "description": "تصميم وتطور مواقع شركات احترافية في منطقة الخليج العربي",
+  "name": "Gulf Web",
+  "short_name": "Gulf Web",
+  "description": "Design and develop professional corporate websites in the Gulf region",
   "start_url": "/",
   "display": "standalone",
   "background_color": "#ffffff",
-  "theme_color": "#142644",
+  "theme_color": "#ffffff",
   "orientation": "portrait-primary",
-  "dir": "rtl",
-  "lang": "ar",
+  "dir": "ltr",
+  "lang": "en",
   "icons": [
     {
       "src": "/icon-192.svg",

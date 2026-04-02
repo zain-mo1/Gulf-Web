@@ -1,4 +1,4 @@
-import { Mail, Phone, MapPin } from "lucide-react";
+import { Mail, MessageCircle, MapPin } from "lucide-react";
 
 export function Footer() {
   const currentYear = new Date().getFullYear();
@@ -13,12 +13,12 @@ export function Footer() {
               <div className="relative w-32">
                 <img 
                   src="/gulf-dark-logo.svg" 
-                  alt="جلف ويب كو" 
+                  alt="جلف ويب" 
                   className="w-full h-auto dark:hidden"
                 />
                 <img 
                   src="/gulf-light-logo.svg" 
-                  alt="جلف ويب كو" 
+                  alt="جلف ويب" 
                   className="w-full h-auto hidden dark:block"
                 />
               </div>
@@ -69,10 +69,10 @@ export function Footer() {
               </li>
               <li className="flex items-center gap-3">
                 <div className="w-10 h-10 rounded-xl bg-primary/10 flex items-center justify-center shrink-0">
-                  <Phone className="w-5 h-5 text-primary" />
+                  <MessageCircle className="w-5 h-5 text-primary" />
                 </div>
-                <a href="https://wa.me/01500183393" target="_blank" rel="noopener noreferrer" className="text-body text-muted-foreground hover:text-primary transition-colors" dir="ltr">
-                  01500183393
+                <a href="https://wa.me/01500183393" target="_blank" rel="noopener noreferrer" className="text-body text-muted-foreground hover:text-primary transition-colors font-medium text-right" dir="ltr">
+                  تواصل عبر واتساب
                 </a>
               </li>
               <li className="flex items-center gap-3">

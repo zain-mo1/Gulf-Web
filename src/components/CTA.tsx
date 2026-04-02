@@ -7,7 +7,7 @@ export function CTA() {
       {/* Background effects */}
       <div className="absolute inset-0 bg-gradient-glow" />
       <div className="absolute inset-0 bg-grid-pattern bg-grid opacity-20" />
-      
+
       {/* Animated orbs */}
       <div className="absolute top-0 right-1/4 w-96 h-96 bg-primary/10 rounded-full blur-3xl" />
       <div className="absolute bottom-0 left-1/4 w-80 h-80 bg-primary/5 rounded-full blur-3xl" />
@@ -29,7 +29,7 @@ export function CTA() {
 
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
             <a
-              href={`https://wa.me/201098098418?text=${encodeURIComponent("مرحباً، أود الاستفسار عن خدماتكم لإنشاء موقع إلكتروني.")}`}
+              href={`https://wa.me/01500183393?text=${encodeURIComponent("مرحباً، أود الاستفسار عن خدماتكم لإنشاء موقع إلكتروني.")}`}
               target="_blank"
               rel="noopener noreferrer"
               className="group inline-flex items-center gap-3 px-8 py-4 rounded-2xl bg-gradient-primary text-white font-semibold text-body-lg hover:opacity-90 transition-all glow"

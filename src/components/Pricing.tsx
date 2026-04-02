@@ -12,7 +12,7 @@ const plans = [
       "متجاوب مع جميع الأجهزة",
       "سرعة تحميل عالية",
       "شهادة SSL مجانية",
-      "دعم فني لمدة سنة",
+      "دعم فني لمدة شهر",
       "تسليم خلال 5-7 أيام"
     ],
     popular: false
@@ -51,7 +51,7 @@ const plans = [
 
 const getWhatsAppUrl = (planName: string) => {
   const message = `مرحباً، أود الاستفسار عن تفاصيل باقة "${planName}" لتصميم موقعي.`;
-  return `https://wa.me/201098098418?text=${encodeURIComponent(message)}`;
+  return `https://wa.me/01500183393?text=${encodeURIComponent(message)}`;
 };
 
 export function Pricing() {
@@ -81,11 +81,10 @@ export function Pricing() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
-              className={`relative p-5 sm:p-8 rounded-2xl border transition-all duration-300 ${
-                plan.popular
-                  ? "border-primary bg-card shadow-xl shadow-primary/10 lg:scale-105"
-                  : "border-border bg-card hover:border-primary/30"
-              }`}
+              className={`relative p-5 sm:p-8 rounded-2xl border transition-all duration-300 ${plan.popular
+                ? "border-primary bg-card shadow-xl shadow-primary/10 lg:scale-105"
+                : "border-border bg-card hover:border-primary/30"
+                }`}
             >
               {plan.popular && (
                 <div className="absolute -top-3 sm:-top-4 right-1/2 translate-x-1/2 px-3 sm:px-4 py-1 rounded-full bg-gradient-primary text-white text-xs sm:text-body-sm font-medium flex items-center gap-1 whitespace-nowrap">
@@ -128,11 +127,10 @@ export function Pricing() {
                 href={getWhatsAppUrl(plan.name)}
                 target="_blank"
                 rel="noopener noreferrer"
-                className={`block w-full py-2.5 sm:py-3 rounded-xl text-center text-sm sm:text-base font-medium transition-all ${
-                  plan.popular
-                    ? "bg-gradient-primary text-white hover:opacity-90 glow"
-                    : "bg-secondary text-foreground hover:bg-secondary/80"
-                }`}
+                className={`block w-full py-2.5 sm:py-3 rounded-xl text-center text-sm sm:text-base font-medium transition-all ${plan.popular
+                  ? "bg-gradient-primary text-white hover:opacity-90 glow"
+                  : "bg-secondary text-foreground hover:bg-secondary/80"
+                  }`}
               >
                 اطلب الآن
               </a>

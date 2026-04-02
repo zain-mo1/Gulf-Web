@@ -5,17 +5,17 @@ import { useTrackClick } from "@/hooks/use-analytics";
 export function Hero() {
   const trackQuoteClick = useTrackClick("CTA", "اطلب عرض سعر (Hero)");
   const trackServicesClick = useTrackClick("CTA", "شاهد خدماتنا (Hero)");
-  
+
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-24 md:pt-28 pb-24 md:pb-32">
       {/* Background effects */}
       <div className="absolute inset-0 bg-gradient-glow" />
       <div className="absolute inset-0 bg-grid-pattern bg-grid opacity-30" />
-      
+
       {/* Animated orbs */}
       <div className="absolute top-1/4 right-1/4 w-96 h-96 bg-primary/10 rounded-full blur-3xl animate-float" />
       <div className="absolute bottom-1/4 left-1/4 w-80 h-80 bg-primary/5 rounded-full blur-3xl animate-float" style={{ animationDelay: "1.5s" }} />
-      
+
       <div className="container relative z-10 text-center px-4">
         {/* Badge */}
         <motion.div
@@ -62,7 +62,7 @@ export function Hero() {
           className="flex flex-col sm:flex-row items-center justify-center gap-4"
         >
           <a
-            href={`https://wa.me/201098098418?text=${encodeURIComponent("مرحباً، أود طلب عرض سعر لتصميم موقع لشركتي.")}`}
+            href={`https://wa.me/01500183393?text=${encodeURIComponent("مرحباً، أود طلب عرض سعر لتصميم موقع لشركتي.")}`}
             target="_blank"
             rel="noopener noreferrer"
             onClick={trackQuoteClick}

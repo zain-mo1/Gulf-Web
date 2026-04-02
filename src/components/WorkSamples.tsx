@@ -160,7 +160,7 @@ export function WorkSamples() {
           className="text-center mt-12"
         >
           <a
-            href={`https://wa.me/201098098418?text=${encodeURIComponent("مرحباً، أود الاستفسار عن تفاصيل تصميم موقع مشابه لأعمالكم السابقة.")}`}
+            href={`https://wa.me/01500183393?text=${encodeURIComponent("مرحباً، أود الاستفسار عن تفاصيل تصميم موقع مشابه لأعمالكم السابقة.")}`}
             target="_blank"
             rel="noopener noreferrer"
             className="group inline-flex items-center gap-3 px-8 py-4 rounded-2xl bg-gradient-primary text-white font-semibold text-body-lg hover:opacity-90 transition-all glow"

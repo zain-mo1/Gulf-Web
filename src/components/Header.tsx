@@ -43,14 +43,14 @@ export function Header() {
         <div className="flex items-center gap-2 sm:gap-3">
           <ThemeToggle />
           <a
-            href={`https://wa.me/201098098418?text=${encodeURIComponent("مرحباً، أود طلب عرض سعر لتصميم موقع لشركتي.")}`}
+            href={`https://wa.me/01500183393?text=${encodeURIComponent("مرحباً، أود طلب عرض سعر لتصميم موقع لشركتي.")}`}
             target="_blank"
             rel="noopener noreferrer"
             className="hidden sm:inline-flex px-4 sm:px-5 py-2 sm:py-2.5 rounded-xl bg-gradient-primary text-white font-medium text-sm sm:text-body-sm hover:opacity-90 transition-opacity glow"
           >
             اطلب عرض سعر
           </a>
-          
+
           {/* Mobile Menu Button */}
           <button
             onClick={() => setIsMenuOpen(!isMenuOpen)}
@@ -74,29 +74,29 @@ export function Header() {
         className="lg:hidden overflow-hidden border-t border-border/50"
       >
         <nav className="container py-4 flex flex-col gap-2">
-          <a 
-            href="#services" 
+          <a
+            href="#services"
             onClick={() => setIsMenuOpen(false)}
             className="px-4 py-3 rounded-xl text-body text-muted-foreground hover:text-foreground hover:bg-secondary transition-colors"
           >
             خدماتنا
           </a>
-          <a 
-            href="#process" 
+          <a
+            href="#process"
             onClick={() => setIsMenuOpen(false)}
             className="px-4 py-3 rounded-xl text-body text-muted-foreground hover:text-foreground hover:bg-secondary transition-colors"
           >
             آلية العمل
           </a>
-          <a 
-            href="#pricing" 
+          <a
+            href="#pricing"
             onClick={() => setIsMenuOpen(false)}
             className="px-4 py-3 rounded-xl text-body text-muted-foreground hover:text-foreground hover:bg-secondary transition-colors"
           >
             الأسعار
           </a>
-          <a 
-            href="/install" 
+          <a
+            href="/install"
             onClick={() => setIsMenuOpen(false)}
             className="px-4 py-3 rounded-xl text-body text-muted-foreground hover:text-foreground hover:bg-secondary transition-colors flex items-center gap-2"
           >
@@ -104,7 +104,7 @@ export function Header() {
             ثبّت التطبيق
           </a>
           <a
-            href={`https://wa.me/201098098418?text=${encodeURIComponent("مرحباً، أود طلب عرض سعر لتصميم موقع لشركتي.")}`}
+            href={`https://wa.me/01500183393?text=${encodeURIComponent("مرحباً، أود طلب عرض سعر لتصميم موقع لشركتي.")}`}
             target="_blank"
             rel="noopener noreferrer"
             onClick={() => setIsMenuOpen(false)}

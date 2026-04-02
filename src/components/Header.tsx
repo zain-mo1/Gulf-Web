@@ -31,13 +31,13 @@ export function Header() {
 
         {/* Desktop Navigation */}
         <nav className="hidden lg:flex items-center gap-8">
-          <a href="#services" className="text-body text-muted-foreground hover:text-foreground transition-colors link-underline">
+          <a href="/#services" className="text-body text-muted-foreground hover:text-foreground transition-colors link-underline">
             خدماتنا
           </a>
-          <a href="#process" className="text-body text-muted-foreground hover:text-foreground transition-colors link-underline">
+          <a href="/#process" className="text-body text-muted-foreground hover:text-foreground transition-colors link-underline">
             آلية العمل
           </a>
-          <a href="#pricing" className="text-body text-muted-foreground hover:text-foreground transition-colors link-underline">
+          <a href="/#pricing" className="text-body text-muted-foreground hover:text-foreground transition-colors link-underline">
             الأسعار
           </a>
           <a href="/install" className="text-body text-muted-foreground hover:text-foreground transition-colors link-underline flex items-center gap-2">
@@ -81,21 +81,21 @@ export function Header() {
       >
         <nav className="container py-4 flex flex-col gap-2">
           <a
-            href="#services"
+            href="/#services"
             onClick={() => setIsMenuOpen(false)}
             className="px-4 py-3 rounded-xl text-body text-muted-foreground hover:text-foreground hover:bg-secondary transition-colors"
           >
             خدماتنا
           </a>
           <a
-            href="#process"
+            href="/#process"
             onClick={() => setIsMenuOpen(false)}
             className="px-4 py-3 rounded-xl text-body text-muted-foreground hover:text-foreground hover:bg-secondary transition-colors"
           >
             آلية العمل
           </a>
           <a
-            href="#pricing"
+            href="/#pricing"
             onClick={() => setIsMenuOpen(false)}
             className="px-4 py-3 rounded-xl text-body text-muted-foreground hover:text-foreground hover:bg-secondary transition-colors"
           >

@@ -45,10 +45,10 @@ export function InstallPrompt() {
       e.preventDefault();
       setDeferredPrompt(e as BeforeInstallPromptEvent);
 
-      // Show popup after delay
+      // Show popup after delay - 1 minute and a half (90000ms)
       setTimeout(() => {
         setIsVisible(true);
-      }, 4000);
+      }, 90000);
     };
 
     window.addEventListener("beforeinstallprompt", handleBeforeInstall);
@@ -129,7 +129,7 @@ export function InstallPrompt() {
 
                 {/* Title */}
                 <h2 className="text-heading-2 text-foreground mb-2">
-                  ثبت تطبيق GulfWebCo على هاتفك
+                  ثبت تطبيق جلف ويب على هاتفك
                 </h2>
 
                 {/* Description */}

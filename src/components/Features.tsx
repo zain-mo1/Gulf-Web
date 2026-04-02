@@ -38,7 +38,7 @@ export function Features() {
           className="text-center mb-16"
         >
           <h2 className="text-display-3 md:text-display-2 text-foreground mb-4">
-            لماذا <span className="text-gradient">جلف ويب كو</span>؟
+            لماذا <span className="text-gradient">جلف ويب</span>؟
           </h2>
           <p className="text-body-lg text-muted-foreground max-w-xl mx-auto">
             نقدم لك تجربة مختلفة في تصميم المواقع. بساطة وسرعة وجودة.

@@ -29,7 +29,7 @@ export function CTA() {
 
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
             <a
-              href={`https://wa.me/01500183393?text=${encodeURIComponent("مرحباً، أود الاستفسار عن خدماتكم لإنشاء موقع إلكتروني.")}`}
+              href={`https://wa.me/01500183393?text=${encodeURIComponent("مرحباً جلف ويب، أود الاستفادة من عرض الـ 10% خصم لأول 10 عملاء.")}`}
               target="_blank"
               rel="noopener noreferrer"
               className="group inline-flex items-center gap-3 px-8 py-4 rounded-2xl bg-gradient-primary text-white font-semibold text-body-lg hover:opacity-90 transition-all glow"
@@ -38,10 +38,12 @@ export function CTA() {
               <ArrowLeft className="w-5 h-5 transition-transform group-hover:-translate-x-1" />
             </a>
             <a
-              href="mailto:info@gulfwebco.com"
-              className="inline-flex items-center gap-2 px-8 py-4 rounded-2xl border border-border bg-surface-elevated text-foreground font-medium text-body-lg hover:bg-secondary transition-colors"
+              href={`https://wa.me/01500183393?text=${encodeURIComponent("مرحباً جلف ويب، أود الاستفادة من عرض الـ 10% الخصم الإضافي لأول 10 عملاء.")}`}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 px-8 py-4 rounded-2xl border border-primary/20 bg-primary/5 text-primary font-bold text-body-lg hover:bg-primary/10 transition-colors shadow-sm"
             >
-              راسلنا بالبريد
+              🎁 خصم إضافي 10% لأول 10 عملاء
             </a>
           </div>
         </motion.div>

@@ -10,12 +10,18 @@ export function Footer() {
           {/* Brand */}
           <div>
             <a href="/" className="flex items-center gap-3 mb-4">
-              <div className="w-10 h-10 rounded-xl bg-gradient-primary flex items-center justify-center text-white font-bold text-lg">
-                G
+              <div className="relative w-32">
+                <img 
+                  src="/gulf-dark-logo.svg" 
+                  alt="جلف ويب كو" 
+                  className="w-full h-auto dark:hidden"
+                />
+                <img 
+                  src="/gulf-light-logo.svg" 
+                  alt="جلف ويب كو" 
+                  className="w-full h-auto hidden dark:block"
+                />
               </div>
-              <span className="text-heading-3 font-bold text-foreground">
-                جلف ويب كو
-              </span>
             </a>
             <p className="text-body text-muted-foreground max-w-xs">
               شركة متخصصة في تصميم وتطوير مواقع الشركات الاحترافية في منطقة الخليج العربي.
@@ -84,7 +90,7 @@ export function Footer() {
         {/* Bottom */}
         <div className="pt-8 border-t border-border text-center">
           <p className="text-body-sm text-muted-foreground">
-            © {currentYear} جلف ويب كو. جميع الحقوق محفوظة.
+            © {currentYear} جلف ويب. جميع الحقوق محفوظة.
           </p>
         </div>
       </div>

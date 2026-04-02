@@ -8,6 +8,7 @@ import Install from "./pages/Install";
 import NotFound from "./pages/NotFound";
 import Analytics from "./pages/Analytics";
 import { InstallPrompt } from "@/components/InstallPrompt";
+import { FloatingActions } from "@/components/FloatingActions";
 
 const queryClient = new QueryClient();
 
@@ -17,6 +18,7 @@ const App = () => (
       <Toaster />
       <Sonner />
       <InstallPrompt />
+      <FloatingActions />
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<Index />} />

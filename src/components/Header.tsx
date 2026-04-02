@@ -15,12 +15,18 @@ export function Header() {
     >
       <div className="container flex items-center justify-between h-16 md:h-20">
         <a href="/" className="flex items-center gap-2 sm:gap-3 group">
-          <div className="w-9 h-9 sm:w-10 sm:h-10 rounded-xl bg-gradient-primary flex items-center justify-center text-white font-bold text-base sm:text-lg">
-            G
+          <div className="relative w-28 sm:w-36">
+            <img 
+              src="/gulf-dark-logo.svg" 
+              alt="جلف ويب كو" 
+              className="w-full h-auto dark:hidden"
+            />
+            <img 
+              src="/gulf-light-logo.svg" 
+              alt="جلف ويب كو" 
+              className="w-full h-auto hidden dark:block"
+            />
           </div>
-          <span className="text-lg sm:text-heading-3 font-bold text-foreground">
-            جلف ويب كو
-          </span>
         </a>
 
         {/* Desktop Navigation */}

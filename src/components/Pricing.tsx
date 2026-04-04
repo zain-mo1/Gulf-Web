@@ -50,8 +50,7 @@ const plans = [
 ];
 
 const getWhatsAppUrl = (planName: string) => {
-  const message = `مرحباً، أود الاستفسار عن تفاصيل باقة "${planName}" لتصميم موقعي.`;
-  return `https://wa.me/01500183393?text=${encodeURIComponent(message)}`;
+  return `https://wa.me/01038150652?text=${encodeURIComponent(`مرحباً جلف ويب، أود الاستفسار عن باقة: ${planName}`)}`;
 };
 
 export function Pricing() {

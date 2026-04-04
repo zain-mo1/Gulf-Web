@@ -30,7 +30,7 @@ export function FloatingActions() {
     });
   };
 
-  const whatsappUrl = `https://wa.me/01500183393?text=${encodeURIComponent("مرحباً جلف ويب، أود الاستفادة من خصم الـ 10% الإضافي لأول 10 عملاء.")}`;
+  const whatsappUrl = `https://wa.me/01038150652?text=${encodeURIComponent("مرحباً جلف ويب، أود الاستفادة من خصم الـ 10% الإضافي لأول 10 عملاء.")}`;
 
   return (
     <div className="fixed bottom-6 right-6 z-50 flex flex-col items-center gap-4 pointer-events-none" dir="rtl">

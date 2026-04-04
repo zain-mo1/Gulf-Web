@@ -29,7 +29,7 @@ export function CTA() {
 
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
             <a
-              href={`https://wa.me/01500183393?text=${encodeURIComponent("مرحباً جلف ويب، أود الاستفادة من عرض الـ 10% خصم لأول 10 عملاء.")}`}
+              href={`https://wa.me/01038150652?text=${encodeURIComponent("مرحباً جلف ويب، أود الاستفادة من عرض الـ 10% خصم لأول 10 عملاء.")}`}
               target="_blank"
               rel="noopener noreferrer"
               className="group inline-flex items-center gap-3 px-8 py-4 rounded-2xl bg-gradient-primary text-white font-semibold text-body-lg hover:opacity-90 transition-all glow"

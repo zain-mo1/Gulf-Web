@@ -62,7 +62,7 @@ export function Hero() {
           className="flex flex-col sm:flex-row items-center justify-center gap-4"
         >
           <a
-            href={`https://wa.me/01038150652?text=${encodeURIComponent("مرحباً، أود طلب عرض سعر لتصميم موقع لشركتي.")}`}
+            href={`https://wa.me/201038150652?text=${encodeURIComponent("مرحباً، أود طلب عرض سعر لتصميم موقع لشركتي.")}`}
             target="_blank"
             rel="noopener noreferrer"
             onClick={trackQuoteClick}

@@ -1,4 +1,5 @@
 import { ThemeToggle } from "./ThemeToggle";
+import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import { useState } from "react";
 import { Menu, X, Download } from "lucide-react";
@@ -40,6 +41,9 @@ export function Header() {
           <a href="/#pricing" className="text-body text-muted-foreground hover:text-foreground transition-colors link-underline">
             الأسعار
           </a>
+          <Link to="/articles" className="text-body text-muted-foreground hover:text-foreground transition-colors link-underline">
+            المدونة
+          </Link>
           <a href="/install" className="text-body text-muted-foreground hover:text-foreground transition-colors link-underline flex items-center gap-2">
             <Download className="w-4 h-4" />
             ثبّت التطبيق
@@ -101,6 +105,13 @@ export function Header() {
           >
             الأسعار
           </a>
+          <Link
+            to="/articles"
+            onClick={() => setIsMenuOpen(false)}
+            className="px-4 py-3 rounded-xl text-body text-muted-foreground hover:text-foreground hover:bg-secondary transition-colors"
+          >
+            المدونة
+          </Link>
           <a
             href="/install"
             onClick={() => setIsMenuOpen(false)}

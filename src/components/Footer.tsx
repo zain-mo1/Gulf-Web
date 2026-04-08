@@ -1,4 +1,5 @@
 import { Mail, MessageCircle, MapPin } from "lucide-react";
+import { Link } from "react-router-dom";
 
 export function Footer() {
   const currentYear = new Date().getFullYear();
@@ -43,9 +44,14 @@ export function Footer() {
                 </a>
               </li>
               <li>
-                <a href="#pricing" className="text-body text-muted-foreground hover:text-primary transition-colors">
+                <a href="/#pricing" className="text-body text-muted-foreground hover:text-primary transition-colors">
                   الأسعار
                 </a>
+              </li>
+              <li>
+                <Link to="/articles" className="text-body text-muted-foreground hover:text-primary transition-colors">
+                  المدونة
+                </Link>
               </li>
               <li>
                 <a href="#contact" className="text-body text-muted-foreground hover:text-primary transition-colors">

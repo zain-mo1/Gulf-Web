@@ -27,7 +27,7 @@ export default function Blog() {
           </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {articles.map((article, index) => (
+            {[...articles].sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime()).map((article, index) => (
               <motion.article 
                 key={article.id}
                 initial={{ opacity: 0, y: 20 }}

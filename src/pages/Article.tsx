@@ -2,9 +2,8 @@ import { useParams, Navigate, Link } from "react-router-dom";
 import { Helmet } from "react-helmet-async";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
-import { CTA } from "@/components/CTA";
 import { getArticleBySlug } from "@/data/articles";
-import { Calendar, User, ArrowRight } from "lucide-react";
+import { Calendar, User, ArrowRight, Clock, Twitter, Send, Share2 } from "lucide-react";
 import { motion } from "framer-motion";
 
 export default function Article() {
@@ -15,10 +14,12 @@ export default function Article() {
     return <Navigate to="/articles" replace />;
   }
 
+  const currentUrl = typeof window !== 'undefined' ? window.location.href : '';
+
   return (
-    <div className="min-h-screen bg-background flex flex-col">
+    <div className="min-h-screen bg-background flex flex-col font-arabic">
       <Helmet>
-        <title>{article.title} | مدونة جلف ويب</title>
+        <title>{article.title} | מדونة جلف ويب</title>
         <meta name="description" content={article.excerpt} />
         <meta property="og:title" content={article.title} />
         <meta property="og:description" content={article.excerpt} />
@@ -30,80 +31,134 @@ export default function Article() {
 
       <Header />
 
-      <main className="flex-1 pt-32 pb-16">
-        <article className="container max-w-4xl">
+      <main className="flex-1 pt-32 pb-16 relative">
+        <article className="container max-w-6xl">
+          {/* Back Button */}
           <Link 
             to="/articles"
-            className="inline-flex items-center gap-2 text-muted-foreground hover:text-foreground transition-colors mb-8"
+            className="inline-flex items-center gap-2 text-muted-foreground hover:text-primary transition-colors mb-8 font-medium bg-surface px-4 py-2 rounded-xl border border-border"
           >
             <ArrowRight className="w-4 h-4" />
-            العودة للمدونة
+            العودة للمقالات
           </Link>
 
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5 }}
-          >
-            <div className="flex flex-wrap gap-2 mb-6">
-              {article.tags.map(tag => (
-                <span key={tag} className="text-xs font-semibold px-3 py-1 rounded-full bg-primary/10 text-primary">
-                  {tag}
-                </span>
-              ))}
-            </div>
+          <div className="grid lg:grid-cols-12 gap-12 items-start">
+            
+            {/* Main Content Area */}
+            <motion.div 
+              className="lg:col-span-8 lg:col-start-1 order-2 lg:order-1"
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5 }}
+            >
+              {/* Header */}
+              <div className="mb-10">
+                <div className="flex flex-wrap gap-2 mb-6">
+                  {article.tags.map(tag => (
+                    <span key={tag} className="text-xs font-semibold px-3 py-1.5 rounded-full bg-primary/10 text-primary border border-primary/20">
+                      {tag}
+                    </span>
+                  ))}
+                </div>
 
-            <h1 className="text-display-3 md:text-display-2 text-foreground mb-6 leading-tight">
-              {article.title}
-            </h1>
+                <h1 className="text-display-3 md:text-display-2 text-foreground mb-6 leading-tight font-bold">
+                  {article.title}
+                </h1>
 
-            <div className="flex items-center gap-6 text-muted-foreground mb-10 pb-10 border-b border-border">
-              <div className="flex items-center gap-2">
-                <User className="w-5 h-5 text-primary" />
-                <span className="font-medium">{article.author}</span>
+                <div className="flex flex-wrap items-center gap-6 text-muted-foreground pb-8 border-b border-border">
+                  <div className="flex items-center gap-2 bg-surface px-4 py-2 rounded-xl border border-border">
+                    <User className="w-4 h-4 text-primary" />
+                    <span className="font-medium text-sm">{article.author}</span>
+                  </div>
+                  <div className="flex items-center gap-2 bg-surface px-4 py-2 rounded-xl border border-border">
+                    <Calendar className="w-4 h-4 text-primary" />
+                    <time dateTime={article.date} className="font-medium text-sm">
+                      {new Date(article.date).toLocaleDateString('ar-EG', { year: 'numeric', month: 'long', day: 'numeric' })}
+                    </time>
+                  </div>
+                  <div className="flex items-center gap-2 bg-surface px-4 py-2 rounded-xl border border-border">
+                    <Clock className="w-4 h-4 text-primary" />
+                    <span className="font-medium text-sm">{article.readTime}</span>
+                  </div>
+                </div>
               </div>
-              <div className="flex items-center gap-2">
-                <Calendar className="w-5 h-5 text-primary" />
-                <time dateTime={article.date} className="font-medium">
-                  {new Date(article.date).toLocaleDateString('ar-EG', { year: 'numeric', month: 'long', day: 'numeric' })}
-                </time>
-              </div>
-            </div>
 
-            <div className="rounded-3xl overflow-hidden aspect-[21/9] mb-12 shadow-md">
-              <img 
-                src={article.imageUrl} 
-                alt={article.title}
-                className="w-full h-full object-cover"
+              {/* Cover Image */}
+              <div className="rounded-[2rem] overflow-hidden aspect-[21/10] mb-12 shadow-2xl relative group">
+                <div className="absolute inset-0 bg-primary/5 group-hover:bg-transparent transition-colors z-10" />
+                <img 
+                  src={article.imageUrl} 
+                  alt={article.title}
+                  className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                />
+              </div>
+
+              {/* Rich Content */}
+              <div 
+                className="prose prose-lg dark:prose-invert max-w-none 
+                  prose-p:text-body-lg prose-p:leading-relaxed prose-p:text-muted-foreground
+                  prose-headings:text-foreground prose-headings:font-bold 
+                  prose-h2:text-heading-1 prose-h2:mt-12 prose-h2:mb-6
+                  prose-h3:text-heading-2 prose-h3:mt-8 prose-h3:mb-4
+                  prose-a:text-primary hover:prose-a:text-primary/80 
+                  prose-img:rounded-3xl prose-img:shadow-xl
+                  prose-ul:list-none prose-ul:pl-0 prose-ul:pr-0
+                  prose-li:relative prose-li:pr-6 prose-li:mb-2
+                  before:prose-li:absolute before:prose-li:right-0 before:prose-li:top-3 before:prose-li:w-2 before:prose-li:h-2 before:prose-li:bg-primary before:prose-li:rounded-full"
+                dangerouslySetInnerHTML={{ __html: article.content }}
               />
+            </motion.div>
+
+            {/* Sticky Sidebar */}
+            <div className="lg:col-span-3 lg:col-start-10 order-1 lg:order-2 lg:sticky lg:top-32">
+              <div className="bg-surface border border-border rounded-3xl p-6 shadow-sm">
+                <h4 className="text-heading-3 text-foreground mb-6 flex items-center gap-2">
+                  <Share2 className="w-5 h-5 text-primary" />
+                  شارك المقال
+                </h4>
+                
+                <div className="flex flex-col gap-3">
+                  <a 
+                    href={`https://twitter.com/intent/tweet?url=${encodeURIComponent(currentUrl)}&text=${encodeURIComponent(article.title)}`}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center gap-3 w-full p-4 rounded-xl border border-border hover:bg-[#1DA1F2]/10 hover:text-[#1DA1F2] hover:border-[#1DA1F2]/30 transition-colors group"
+                  >
+                    <Twitter className="w-5 h-5" />
+                    <span className="font-medium">شارك على تويتر (X)</span>
+                  </a>
+                  
+                  <a 
+                    href={`https://wa.me/?text=${encodeURIComponent(article.title + " - " + currentUrl)}`}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center gap-3 w-full p-4 rounded-xl border border-border hover:bg-[#25D366]/10 hover:text-[#25D366] hover:border-[#25D366]/30 transition-colors group"
+                  >
+                    <Send className="w-5 h-5" />
+                    <span className="font-medium">شارك على واتساب</span>
+                  </a>
+                </div>
+
+                <hr className="my-8 border-border" />
+
+                <div className="text-center">
+                  <h4 className="font-bold text-foreground mb-2">استشارة مجانية</h4>
+                  <p className="text-sm text-muted-foreground mb-4">احصل على استشارة تقنية لمشروعك بناءً على هذا المقال.</p>
+                  <a
+                    href="https://wa.me/201038150652?text=مرحباً، أود استشارة حول برمجة موقعي."
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="w-full inline-flex justify-center items-center gap-2 bg-gradient-primary text-white py-3 rounded-xl font-medium hover:opacity-90 glow transition-all"
+                  >
+                    تواصل معنا
+                  </a>
+                </div>
+              </div>
             </div>
 
-            {/* Content */}
-            <div 
-              className="prose prose-lg dark:prose-invert max-w-none prose-headings:text-foreground prose-a:text-primary hover:prose-a:text-primary/80 prose-img:rounded-2xl prose-hr:border-border"
-              dangerouslySetInnerHTML={{ __html: article.content }}
-            />
-          </motion.div>
+          </div>
         </article>
       </main>
-
-      {/* Internal CTA specific to article readers */}
-      <section className="py-16 bg-surface border-y border-border">
-        <div className="container max-w-3xl text-center">
-          <h3 className="text-heading-2 text-foreground mb-4">هل تبحث عن شريك لنجاحك الرقمي؟</h3>
-          <p className="text-body-lg text-muted-foreground mb-8">
-            حول الأفكار التي قرأتها للتو إلى واقع ملموس مع فريق جلف ويب.
-          </p>
-          <a
-            href={`https://wa.me/201038150652?text=${encodeURIComponent("مرحباً جلف ويب، قرأت مقالكم في المدونة وأود الاستفسار عن خدماتكم.")}`}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex items-center gap-3 px-8 py-4 rounded-2xl bg-gradient-primary text-white font-semibold text-body-lg hover:opacity-90 transition-all glow"
-          >
-            تواصل معنا الآن للبدء
-          </a>
-        </div>
-      </section>
 
       <Footer />
     </div>
